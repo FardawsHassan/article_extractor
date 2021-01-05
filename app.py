@@ -20,8 +20,7 @@ class send(Resource):
         try:
             data = request.form
             url = data['messege']
-            #url="https://newspaper.readthedocs.io/en/latest/"
-            article = Article(url,keep_article_html=True,request_timeout=10000,fetch_images=True,MIN_WORD_COUNT=70,browser_user_agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0",MAX_TEXT=100000000,MAX_TITLE=500")
+            article = Article(url,keep_article_html=True,request_timeout=10000,fetch_images=True,MIN_WORD_COUNT=70,browser_user_agent="Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:71.0) Gecko/20100101 Firefox/71.0",MAX_TEXT=100000000,MAX_TITLE=500)
             article.download()
             article.parse()
             retJson = {
