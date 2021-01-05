@@ -24,17 +24,17 @@ class send(Resource):
             article = Article(url,keep_article_html=True)
             article.download()
             article.parse()
-        except:
-            return {               
-                'messege':"Data not found.",
-                'status':404
-            }
-        else:
             retJson = {
                 "article": article.text,
                 "status" : 200
             }
             return jsonify(retJson)
+        except:
+            return {               
+                'messege':"Data not found.",
+                'status':404
+            }
+            
     def get(self):
         return 'You are trying to enter from a wrong way. you bad boy....'
 
