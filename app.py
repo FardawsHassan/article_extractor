@@ -43,4 +43,4 @@ api.add_resource(send,'/send')
 api.add_resource(main,'/main')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',bug=True)
