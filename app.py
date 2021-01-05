@@ -28,7 +28,7 @@ class send(Resource):
                 "article": article.text,
                 "status" : 200
             }
-            return "<h1>hello<h1>"
+            return jsonify(retJson)
         except:
             return {               
                 'messege':"Data not found.",
