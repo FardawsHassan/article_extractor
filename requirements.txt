@@ -1,5 +1,4 @@
-Flask==0.10.1
-requests==2.8.0
+Flask==1.1.2
+Flask-RESTful==0.3.8
 newspaper3k==0.2.8
-flask_restful
 uwsgi
